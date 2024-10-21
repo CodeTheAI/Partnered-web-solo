@@ -27,6 +27,7 @@ body {
     align-items: center;
     color: white;
     text-align: center;
+    width: 100%
   }
   .hero-content h1 {
     text-align: center;
@@ -93,6 +94,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(Images/amanda-sandlin-jIdKrtJF8Uk-unsplash.jpg);
     background-size: cover;
     height: 100vh;
+    width:100%
   }
 
   #packages:active {
@@ -159,6 +161,7 @@ body {
   /* Customer Reviews Section */
   #reviews {
     background-color: #a2a2a2;
+    width: 100%
   }
   #reviews h2 {
     font-family: "Poppins", sans-serif;
@@ -186,6 +189,7 @@ body {
   /* Contact Form Section */
   #contact {
     background-color: #a2a2a2;
+    width: 100%
   }
   #contact h2 {
     font-family: "Poppins", sans-serif;
@@ -308,9 +312,6 @@ body {
 
 /* For devices 767px and below (Mobile Phones) */
 @media (max-width: 767px) {
-    section {
-        width: 100%;
-    }
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -326,6 +327,7 @@ body {
 
     .package-container {
         padding: 20px 10px;
+        scroll-snap-type: x mandatory;
         display: flex;
         overflow-x: scroll;
     }
@@ -335,15 +337,21 @@ body {
         min-width: 70%;
         scroll-snap-align: start;
     }
-    .reviews-container {
-        display: flex;
-        flex-direction: column
-        gap: 20px;
+    .reviews-container:
+        flex-wrap: wrap; 
     .review {
         width: 90%;
         margin: 10px auto;
     }
 }
+
+
+
+
+
+
+
+
 
 
 
