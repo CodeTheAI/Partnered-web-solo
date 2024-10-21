@@ -313,8 +313,8 @@ body {
 /* For devices 767px and below (Mobile Phones) */
 @media (max-width: 767px) {
     #hero {
-        width:100%;
-        height: 100vh;
+        width:100% !important;
+        height: 100vh !important;
     }
     .hero-content h1 {
         font-size: 2.5rem;
@@ -329,37 +329,34 @@ body {
         font-size: 14px;
     }
     #package  {
-        width:100%;
-        height: 100vh;
+        width:100% !important;
+        height: 100vh !important;
     }
     .package-container {
         padding: 20px 10px;
         scroll-snap-type: x mandatory;
         display: flex;
         overflow-x: scroll;
-    }
-
-    .package {
-        max-width: 75%;
-        min-width: 70%;
-        scroll-snap-align: start;
+           scroll-snap-align: start;
     }
     #reviews  {
-        width:100%;
-        height: 100vh;
+        width:100% !important;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: 20px;
     }
     .reviews-container:
         flex-wrap: wrap; 
     .review {
-        width: 90%;
         margin: 10px auto;
     }
     #contact {
-        width:100%;
+        width:100% !important;
         height: 100vh;
     }
     footer {
-        width:100%;
+        width:100% !important;
     }
 }
 
