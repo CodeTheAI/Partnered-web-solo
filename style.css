@@ -311,47 +311,63 @@ footer {
 }
 
 /* For devices 767px and below (Mobile Phones) */
-@media (max-width: 767px) {
   body {
-      width: 100% !important;
-  }
-  .hero-content h1 {
-      font-size: 2.5rem;
-  }
+        width: 100vw; /* Ensure full width for mobile */
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
 
-  .hero-content p {
-      font-size: 1.2rem;
-  }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 
-  #scroll-btn {
-      padding: 10px 20px;
-      font-size: 14px;
-  }
-  .package-container {
-      padding: 20px 10px;
-      scroll-snap-type: x mandatory;
-      display: flex;
-      overflow-x: scroll;
-      scroll-snap-align: start;
-  }
-  #reviews  {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      gap: 20px;
-  }
-  .reviews-container{
-      flex-wrap: wrap; 
-  }
-  .review {
-      margin: 10px auto;
-  }
-  footer {
-      width:100% !important;
-  }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    #scroll-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .package-container {
+        padding: 20px 10px;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-align: start;
+        gap: 10px;
+    }
+
+    .package {
+        flex: 0 0 90%; /* Make packages cover more space in mobile view */
+    }
+
+    #reviews {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: 20px;
+    }
+
+    .reviews-container {
+        flex-wrap: wrap;
+    }
+
+    .review {
+        margin: 10px auto;
+    }
+
+    footer {
+        width: 100vw; /* Full width for mobile */
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    section {
+        padding: 0; /* Remove padding to prevent white strips */
+    }
 }
-
-
 
 
 
