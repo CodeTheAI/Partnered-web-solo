@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agency</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <section id="hero">
+        <div class="hero-content">
+        <h1>Explore the World with Us!</h1>
+        <p>Travel to your Luxury Without Additional Problems. </p>
+        <button id="scroll-btn">Discover Packages</button>
+        </div>
+    </section>
+  </header>
+
+  <!-- Travel Packages Section -->
+  <section id="packages">
+    <h2>Our Travel Packages</h2>
+    <div class="package-container">
+      <div class="package">
+        <img src="Images/cityscape-paris-sunlight-blue-sky-fra.jpg" alt="Destination 1">
+        <h3>Paris Up Close</h3>
+        <p>3 days exploration of the Famous Italian City.</p>
+      </div>
+      <div class="package">
+        <img src="Images/landscape-shot-beautiful-valley-surrounded-by-huge-mountains-with-snowy-peaks.jpg" alt="Destination 2">
+        <h3>Mountain Adventure in Mt. Everest</h3>
+        <p>Experience nature up close for 10 days.</p>
+      </div>
+      <div class="package">
+        <img src="Images/midtown-manhattan-new-york-city-usa.jpg" alt="Destination 3">
+        <h3>NY City Escape</h3>
+        <p>5 days exploring urban landscapes in New York City.</p>
+      </div>
+      <div class="package">
+        <img src="Images/hawaii-beach-landscape-with-nature-coastline.jpg" alt="Destination 4">
+        <h3>Hawaii Exploration</h3>
+        <p>Spend a week exploring the beaches of Hawaii along with its culture and traditions.</p>
+      </div>
+      <div class="package">
+        <img src="Images/aerial-view-sandy-beach-with-tourists-swimming-beautiful-clear-sea-water-sumilon-island-beach-landing-near-oslob-cebu-philippines-boost-up-color-processing.jpg" alt="Destination 5">
+        <h3>More Fun in the Philippines</h3>
+        <p>Explore the famous places in the Philippines for 5 days.</p>
+      </div>
+      <div class="package">
+        <img src="Images/tokyo-cityscape-night-japan.jpg" alt="Destination 6">
+        <h3>Tokyo Craze</h3>
+        <p>Spend 3 days exploring around the vast technological city of Tokyo, Japan.</p>
+      </div>
+      <div class="package">
+        <img src="Images/kangaroo-eating-grass.jpg" alt="Destination 7">
+        <h3>The Kangaroos Hunt</h3>
+        <p>Search and Hunt Kangaroos with this 5 days exploration of Australia.</p>
+      </div>
+      <div class="package">
+        <img src="Images/low-angle-shot-two-egyptian-pyramids-each-other.jpg" alt="Destination 8">
+        <h3>The Pyramids of Giza</h3>
+        <p>See The great pyramid in all its glory in this 3 day exploration</p>
+      </div>
+      <div class="package">
+        <img src="Images/big-ben-houses-parliament-london-uk.jpg" alt="Destination 9">
+        <h3>The Big Ben</h3>
+        <p>Feel the elegance and luxury with 5 days exploration in Great Britain.</p>
+      </div>
+      <div class="package">
+        <img src="Images/meric-dagli-3mwMyvD0uGw-unsplash.jpg" alt="Destination 10">
+        <h3>The Hollywood</h3>
+        <p>See the glorious works and actors in Hollywood with this exclusive 3 day trip</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section id="reviews">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews-container">
+      <div class="review">
+        <p>"The best travel experience! Everything was perfectly planned."</p>
+        <span>- Sarah</span>
+      </div>
+      <div class="review">
+        <p>"Amazing service and unforgettable destinations."</p>
+        <span>- John</span>
+      </div>
+      <div class="review">
+        <p>"Everything was arranged according to plan!"</p>
+        <span>- Maria</span>
+      </div>
+      <div class="review">
+        <p>"The bookings were all sent in a proper schedule"</p>
+        <span>- Jonathan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact">
+    <h2>Book Your Adventure With Us!</h2>
+    <form id="booking-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+
+      <label for="destination">Choose Destination</label>
+      <select id="destination">
+        <option value="paris">Paris Up Close</option>
+        <option value="mountain">Mountain Adventure in Mt. Everest</option>
+        <option value="city">NY City Escape</option>
+        <option value="beach">Hawaii Exploration</option>
+        <option value="island">More Fun in the Philippines</option>
+        <option value="city">Tokyo Craze</option>
+        <option value="country">The Kangaroos Hunt</option>
+        <option value="pyramid">The Pyramids of Giza</option>
+        <option value="clock">The Big Ben</option>
+        <option value="hollywood">The Hollywood</option>
+      </select>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Travel Adventure</p>
+  </footer>
+
+  <!-- Booking Confirmation Modal -->
+  <div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Booking Confirmed!</h2>
+      <p>Thank you for booking your trip. We will send you a confirmation email shortly.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
