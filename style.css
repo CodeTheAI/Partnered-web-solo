@@ -308,6 +308,9 @@ body {
 
 /* For devices 767px and below (Mobile Phones) */
 @media (max-width: 767px) {
+    section {
+        width: 100%;
+    }
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -323,7 +326,6 @@ body {
 
     .package-container {
         padding: 20px 10px;
-        scroll-snap-type: x mandatory;
         display: flex;
         overflow-x: scroll;
     }
@@ -333,7 +335,10 @@ body {
         min-width: 70%;
         scroll-snap-align: start;
     }
-
+    .reviews-container {
+        display: flex;
+        flex-direction: column
+        gap: 20px;
     .review {
         width: 90%;
         margin: 10px auto;
