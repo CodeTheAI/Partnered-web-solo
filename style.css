@@ -148,6 +148,8 @@ section {
 
 .package:hover {
   transform: scale(1.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .package img {
