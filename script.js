@@ -58,4 +58,14 @@ packagesContainer.addEventListener('mousemove', (e) => {
   packagesContainer.scrollLeft = scrollLeft - walk; // Scroll the container
 });
 
+// JavaScript to toggle the navbar
+document.getElementById('hamburger-icon').addEventListener('click', () => {
+  const navLinks = document.getElementById('nav-links');
+  const hamburger = document.getElementById('hamburger-icon');
+
+  // Toggle the active class for dropdown visibility
+  navLinks.classList.toggle('active');
   
+  // Toggle the active state of the hamburger icon for animation
+  hamburger.classList.toggle('active');
+});
