@@ -5,6 +5,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  padding-top: 40px; /* Prevent content from being hidden behind the navbar */
 }
 
 h2 {
@@ -15,6 +16,101 @@ h2 {
 section {
   padding: 40px;
 }
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 100;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Travel Agency Text - Left Side */
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* Hamburger Icon - Right Side (Moved to the right corner) */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute;
+  right: 20px;  /* Move hamburger to the right */
+  top: 15px;   /* Position it closer to the top */
+  margin-right: 40px; 
+  margin-top: 40px;
+}
+
+.hamburger .line {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+.nav-links {
+
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  flex-direction: column; /* Change order to column */
+  align-items: center; /* Center align links */
+  display: none; /* Hidden by default */
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 80px; /* Lowered the dropdown so the logo remains visible */
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  opacity: 0; /* Start hidden */
+  pointer-events: none; /* Disable interactions until visible */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Show the dropdown when active */
+.nav-links.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all; /* Enable interactions */
+}
+
+/* Styling for each link */
+.nav-links li {
+  margin: 10px 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #004aad;
+}
+
 
 /* Hero Section */
 #hero {
@@ -34,12 +130,14 @@ section {
   font-size: 4rem;
   font-weight: 400;
   font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
   animation: slideInDown 1.2s ease-out;
   margin-bottom: 1rem;
 }
 .hero-content p {
   font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
   font-style: normal;
   font-size: 1.8rem;
   text-align: center;
@@ -146,8 +244,6 @@ section {
 
 .package:hover {
   transform: scale(1.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .package img {
@@ -289,99 +385,90 @@ footer {
       opacity: 1;
   }
 }
-  
-  /* For devices between 768px and 1024px (Tablets) */
-  @media (max-width: 1024px) {
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-  
-    .hero-content p {
-        font-size: 1.5rem;
-    }
-  
-    .package {
-        max-width: 45%;
-        min-width: 40%;
-    }
-  
-    .review {
-        width: 40%;
-    }
+
+/* Hamburger animation */
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* For devices between 768px and 1024px (Tablets) */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+      font-size: 3rem;
   }
-  
-  /* For devices 767px and below (Mobile Phones) */
-  @media (max-width: 726px) {
+
+  .hero-content p {
+      font-size: 1.5rem;
+  }
+
+  .package {
+      max-width: 45%;
+      min-width: 40%;
+  }
+
+  .review {
+      width: 40%;
+  }
+}
+
+/* For devices 767px and below (Mobile Phones) */
+@media (max-width: 767px) {
   body {
-          width: 100vw; /* Ensure full width for mobile */
-          overflow-x: hidden; /* Prevent horizontal scrolling */
-      }
-  
-      .hero-content h1 {
-          font-size: 2.5rem;
-      }
-  
-      .hero-content p {
-          font-size: 1.2rem;
-      }
-  
-      #scroll-btn {
-          padding: 10px 20px;
-          font-size: 14px;
-      }
-  
-      .package-container {
-          padding: 20px 10px;
-          scroll-snap-type: x mandatory;
-          display: flex;
-          overflow-x: scroll;
-          scroll-snap-align: start;
-          gap: 10px;
-      }
-  
-      .package {
-          flex: 0 0 90%; /* Make packages cover more space in mobile view */
-      }
-  
-      #reviews {
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-          gap: 20px;
-      }
-  
-      .reviews-container {
-          flex-wrap: wrap;
-      }
-  
-      .review {
-          margin: 10px auto;
-      }
-  
-      footer {
-          width: 100vw; /* Full width for mobile */
-          margin: 0;
-          padding: 20px;
-          box-sizing: border-box;
-      }
-  
-      section {
-          padding: 0; /* Remove padding to prevent white strips */
-      }
+      width: 100% !important;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  .hero-content h1 {
+      font-size: 2.5rem;
+  }
+
+  .hero-content p {
+      font-size: 1.2rem;
+  }
+
+  #scroll-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+  .package-container {
+      padding: 20px 10px;
+      scroll-snap-type: x mandatory;
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-align: start;
+  }
+  #reviews  {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      gap: 20px;
+  }
+  .reviews-container{
+      flex-wrap: wrap; 
+  }
+  .review {
+      margin: 10px auto;
+  }
+  footer {
+      width:100% !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
