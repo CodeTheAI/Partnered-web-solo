@@ -3,14 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Agency</title>
+  <title>Travel Adventure</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <!-- Travel Agency Text on the Left -->
+        <div class="logo" id="logo">
+          <h2>Travel Agency</h2>
+        </div>
+  
+        <!-- Hamburger Icon on the Right -->
+        <div class="hamburger" id="hamburger-icon">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+  
+        <!-- Navigation Links (Hidden by default) -->
+        <div class="dropdown" id="dropdown">
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
     <section id="hero">
         <div class="hero-content">
         <h1>Explore the World with Us!</h1>
